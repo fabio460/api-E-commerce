@@ -21,7 +21,7 @@ exports.inserir = (req,res)=>{
     })
     if(sim){
         res.send("campos inseridos com sucesso")
-    }else{res.send('falha na inserção dos produtos')}
+    }else{res.send('falha na inserção de produtos')}
 }
 
 exports.deletar = (req,res)=>{
