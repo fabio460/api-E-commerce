@@ -1,11 +1,40 @@
 <!DOCTYPE html>
    <head>
        <title>home</title>
-       <link type=/>
    </head>
+   <style type="text/css">
+    
+       .container{
+            width: 80%;
+            margin: auto;
+            background-color: rgb(237, 237, 253);
+            padding: 50px;
+       }
+       h1{
+           text-align: center;
+       }
+   </style>
    <body>
-       <h1>Projeto api E-Commerce</h1>
-       <h3>Em desenvolvimento</h3>
-       <div><a href="https://api-e-commerce.vercel.app/listar">lista de produtos</a></div>
+      <div class="container">
+          <h1>Projeto api E-Commerce</h1>
+          <h3>Em desenvolvimento</h3>
+
+          <h2>Api de produtos</h2>
+          <ul>
+              <li>GET => https://api-e-commerce.vercel.app/listarusuarios</li>
+              <li>POST => https://api-e-commerce.vercel.app/postar</li>
+              <li>DELETE => https://api-e-commerce.vercel.app/deletar/{id}</li>
+          </ul>
+          
+   
+
+          <h2>Api de usuarios</h2>
+          <ul>
+              <li>GET => https://api-e-commerce.vercel.app/listarusuarios</li>
+              <li>POST => https://api-e-commerce.vercel.app/cadastrarUsuario</li>
+              <li>PUT => https://api-e-commerce.vercel.app/alterarusuario/{id} </li>
+              <li>DELETE = > localhost:3001/deletarUsuario/{id}</li>
+          </ul>
+      </div>
    </body>
 </html>
