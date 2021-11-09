@@ -17,7 +17,8 @@ exports.inserir = (req,res)=>{
             valor:req.body.valor,
             sexo:req.body.sexo,
             idade:req.body.idade,
-            tipo:req.body.tipo
+            tipo:req.body.tipo,
+            tecido:req.body.tecido
     })
     if(sim){
         res.send("campos inseridos com sucesso")
@@ -32,6 +33,19 @@ exports.deletar = (req,res)=>{
         else{
             res.send("deletado com sucesso")
         }
+    })
+}
+exports.alterar = (req,res)=>{
+    modelProduto.findByIdAndUpdate(req.params.id,{
+        nome:req.body.nome,
+        imagem1:req.body.imagem1,
+        imagem2:req.body.imagem2,
+        valor:req.body.valor,
+        sexo:req.body.sexo,
+        tipo:req.body.tipo,
+        tecido:req.body.tecido
+    },(err)=>{
+        if(err){res.send("produto não atualizado")}else{res.send("produto não atualizado")}
     })
 }
 

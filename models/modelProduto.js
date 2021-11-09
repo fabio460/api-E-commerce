@@ -7,7 +7,8 @@ const schema = mongoose.Schema({
     valor:String,
     sexo:String,
     idade:String,
-    tipo:String
+    tipo:String,
+    tecido:String
 });
 
 const modelProduto = mongoose.model('produto',schema);
