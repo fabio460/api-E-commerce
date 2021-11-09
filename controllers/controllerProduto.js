@@ -8,6 +8,12 @@ exports.listar =async (req,res)=>{
    const produto =await modelProduto.find();
    res.json(produto);
 }
+exports.listarPorNome =async (req,res)=>{
+    const produto =await modelProduto.findOne({
+        nome:req.params.nome
+    });
+   res.json(produto);
+}
 
 exports.inserir = (req,res)=>{
     const sim = modelProduto.create({
@@ -45,7 +51,7 @@ exports.alterar = (req,res)=>{
         tipo:req.body.tipo,
         tecido:req.body.tecido
     },(err)=>{
-        if(err){res.send("produto não atualizado")}else{res.send("produto não atualizado")}
+        if(err){res.send("produto não atualizado")}else{res.send("produto atualizado")}
     })
 }
 

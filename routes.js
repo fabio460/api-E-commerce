@@ -9,6 +9,7 @@ route.get('/',(req,res)=>{res.sendFile(__dirname + '/index.html')})
 
 //produtos
 route.get('/listar',Produto.listar);
+route.get('/listarPorNome/:nome',Produto.listarPorNome)
 route.post('/postar',multer(multerConfig).single(),Produto.inserir)
 route.delete("/deletar/:id",multer(multerConfig).single(),Produto.deletar);
 route.put('/alterar/:id',multer(multerConfig).single(),Produto.alterar);
