@@ -3,7 +3,7 @@ const multer = require('multer');
 const Produto = require('./controllers/controllerProduto');
 const multerConfig = require('./multerConfig')
 const usuario = require('./controllers/usuarioController');
-
+const carrinho  = require('./controllers/controllerCarrinhoDeCompras');
 //home
 route.get('/',(req,res)=>{res.sendFile(__dirname + '/index.html')})
 
@@ -14,6 +14,10 @@ route.post('/postar',multer(multerConfig).single(),Produto.inserir)
 route.delete("/deletar/:id",multer(multerConfig).single(),Produto.deletar);
 route.put('/alterar/:id',multer(multerConfig).single(),Produto.alterar);
 
+//carrinho
+route.get('/listarCarrinho',carrinho.listar);
+route.post('/postarCarrinho',multer(multerConfig).single(),carrinho.inserir)
+route.delete('/deletarCarrinho/:id',multer(multerConfig).single(),carrinho.deletar)
 //usuarios
 route.get('/listarusuarios',usuario.listarUsuario)
 route.post('/cadastrarUsuario',multer(multerConfig).single(),usuario.cadastrarUsuario)
