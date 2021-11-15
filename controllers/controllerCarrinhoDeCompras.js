@@ -9,7 +9,8 @@ exports.inserir = (req,res)=>{
     const sim = modelCarrinho.create({
             nome:req.body.nome,
             imagem1:req.body.imagem1,
-           // imagem2:req.body.imagem2,
+            quantidade:req.body.quantidade,
+            tamanho:req.body.tamanho,
             valor:req.body.valor,
            // sexo:req.body.sexo,
            // idade:req.body.idade,
