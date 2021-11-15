@@ -32,3 +32,12 @@ exports.deletar = (req,res)=>{
         }
     })
 }
+exports.atualizar = (req,res)=>{
+    modelCarrinho.findByIdAndUpdate(req.params.id,{quantidade:req.body.quantidade},(err)=>{
+        if(err){
+            res.send("falha")
+        }else{
+            res.send('atualizado com sucesso')
+        }
+    })
+}

@@ -18,6 +18,7 @@ route.put('/alterar/:id',multer(multerConfig).single(),Produto.alterar);
 route.get('/listarCarrinho',carrinho.listar);
 route.post('/postarCarrinho',multer(multerConfig).single(),carrinho.inserir)
 route.delete('/deletarCarrinho/:id',multer(multerConfig).single(),carrinho.deletar)
+route.put('/atualisacarrinho/:id',multer(multerConfig).single(),carrinho.atualizar)
 //usuarios
 route.get('/listarusuarios',usuario.listarUsuario)
 route.post('/cadastrarUsuario',multer(multerConfig).single(),usuario.cadastrarUsuario)
